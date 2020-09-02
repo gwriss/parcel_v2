@@ -15,7 +15,7 @@
   "scripts": {
     "build": "parcel build index.ts",
     "clean-build-run": "npm run clean && npm run build && node dist/index.js",
-    "clean": "rm -rf .parcel-cache dist",
+    "clean": "rm -rf .parcel-cache dist index.js",
     "clean-all": "npm run clean && rm -rf node_modules",
     "compile": "tsc"
   },
