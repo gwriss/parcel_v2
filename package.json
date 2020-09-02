@@ -9,17 +9,19 @@
       "context": "node",
       "engines": {
         "node": ">=12"
-      },
-      "includeNodeModules": {
-        "aws-sdk": false
       }
     }
   },
   "scripts": {
-    "build": "parcel build index.js"
+    "build": "parcel build index.ts",
+    "clean-build-run": "npm run clean && npm run build && node dist/index.js",
+    "clean": "rm -rf .parcel-cache dist",
+    "clean-all": "npm run clean && rm -rf node_modules",
+    "compile": "tsc"
   },
   "devDependencies": {
     "@parcel/transformer-typescript-tsc": "^2.0.0-beta.1",
-    "parcel": "^2.0.0-beta.1"
+    "parcel": "^2.0.0-beta.1",
+    "typescript": "^3.9.7"
   }
 }
