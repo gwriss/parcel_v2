@@ -1,0 +1,25 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "dist/index.js",
+  "targets": {
+    "main": {
+      "context": "node",
+      "engines": {
+        "node": ">=12"
+      },
+      "includeNodeModules": {
+        "aws-sdk": false
+      }
+    }
+  },
+  "scripts": {
+    "build": "parcel build index.js"
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.0.0-beta.1",
+    "parcel": "^2.0.0-beta.1"
+  }
+}
